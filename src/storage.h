@@ -36,9 +36,9 @@ struct File {
 typedef std::vector<File> Files;
 
 struct Storage {
-    std::string filename1, filename2; // two file names 
+    std::string filename1, filename2, operation; // two file names 
     Files files;   
     Storage() {
-        filename1 = filename2 = "none";
+        filename1 = filename2 = operation = "none";
     }
 };
