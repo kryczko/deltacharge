@@ -14,6 +14,7 @@ void diff3D(Storage& s) {
     output << f1.ax[0] << "\t" << f1.ax[1] << "\t" << f1.ax[2] << "\n";
     output << f1.ay[0] << "\t" << f1.ay[1] << "\t" << f1.ay[2] << "\n";
     output << f1.az[0] << "\t" << f1.az[1] << "\t" << f1.az[2] << "\n";
+    output << "Direct" << "\n";
     for (auto& a : f1.atom_counts) {
         output << a << "  ";
     }
@@ -27,10 +28,18 @@ void diff3D(Storage& s) {
     }
     output << "\n";
     for (int i = 0; i < f1.data.size(); i ++) {
-        output << abs(f1.data[i] - f2.data[i]) << "  ";
-        if ((i + 1) % 5 == 0) {
-            output << "\n";
+        if (s.operation == "-") {
+            output << abs(f1.data[i] - f2.data[i]) << "  ";
+            if ((i + 1) % 5 == 0) {
+                output << "\n";
+            }
+        } else if (s.operation == "+") {
+            output << f1.data[i] + f2.data[i] << "  ";
+            if ((i + 1) % 5 == 0) {
+                output << "\n";
+            }
         }
+        
     }
     output.close();
 }
