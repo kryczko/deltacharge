@@ -26,7 +26,7 @@ void read_file(File& f) {
                     
         } else if (counter == 2) {
             if (stuff.find("Direct") == string::npos) {
-                f.atom_counts.push_back(stoi(stuff.c_str()));
+                f.atom_counts.push_back(atoi(stuff.c_str()));
             } else {
                 counter ++;
             }
@@ -45,9 +45,9 @@ void read_file(File& f) {
         } else if (counter == 4) {
             string a,b;
             input >> a >> b;
-            f.bin_counts[0] = stoi(stuff.c_str());
-            f.bin_counts[1] = stoi(a.c_str());
-            f.bin_counts[2] = stoi(b.c_str());
+            f.bin_counts[0] = atoi(stuff.c_str());
+            f.bin_counts[1] = atoi(a.c_str());
+            f.bin_counts[2] = atoi(b.c_str());
             counter ++;
         } else if (datacount < f.nbins()){
             f.data.push_back(stod(stuff.c_str()));
