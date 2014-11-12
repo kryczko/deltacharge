@@ -14,13 +14,11 @@ void diff3D(Storage& s) {
     output << "   " <<  f1.ax[0] << "\t" << f1.ax[1] << "\t" << f1.ax[2] << "\n";
     output << "   " << f1.ay[0] << "\t" << f1.ay[1] << "\t" << f1.ay[2] << "\n";
     output << "   " << f1.az[0] << "\t" << f1.az[1] << "\t" << f1.az[2] << "\n";
-    output << "Direct" << "\n";
     for (auto& a : f1.atom_counts) {
-        output << "   " << a << "  ";
+        output << "   " << a;
     }
-    output << "Direct" << "\n";
+    output << "\n   Direct" << "\n";
     
-    output << "\n";
     for (auto& line : f1.coords) {
         output << line << "\n";
     }
