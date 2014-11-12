@@ -17,7 +17,7 @@ void diff3D(Storage& s) {
     for (auto& a : f1.atom_counts) {
         output << "   " << a;
     }
-    output << "\n   Direct" << "\n";
+    output << "\nDirect" << "\n";
     
     for (auto& line : f1.coords) {
         output << line << "\n";
