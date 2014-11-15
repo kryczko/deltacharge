@@ -11,10 +11,13 @@
      cd src
      make
      cd ..
-     ./deltacharge CHGCAR1 CHGCAR2
-     
-where CHGCAR1 and CHGCAR2 are your different CHGCAR files. The output data files that will be generated in the directory 'output' consist of: 
+     ./deltacharge + CHGCAR1 CHGCAR2  
+		or
+     ./deltacharge - CHGCAR1 CHGCAR2
 
-- 3D charge difference '3D_charge_diff.dat'
-- 2D charge differences '2D_charge_diff_ab.dat' where ab is either xy, xz, or yz.
-- 1D charge differences '1D_charge_diff_a.dat' where a is either x, y, or z;
+
+The '+' command line argument will add the two CHGCAR's together, and the '-' argument will subtract them.
+
+NOTE: VASP HAS CHANGED ITS CHGCAR IN ITS LATEST VERSIONS. PLEASE REMOVE THE ATOMNAMES IN THE LINE ABOVE THE ATOM COUNTS. FIXES TO THIS ISSUE WILL COME EVENTUALLY.
+
+Prior to running, check the 'output' directory, the CHGCAR in the there will either be the addition of the CHGCAR's or subtraction.

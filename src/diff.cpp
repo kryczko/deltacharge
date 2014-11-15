@@ -29,7 +29,7 @@ void diff3D(Storage& s) {
     output << "\n";
     if (s.operation == "-") {
         for (int i = 0; i < f1.data.size(); i ++) {
-                output << abs(f1.data[i] - f2.data[i]) << "  ";
+                output << f1.data[i] - f2.data[i] << "  ";
                 if ((i + 1) % 5 == 0) {
                     output << "\n";
                 }
