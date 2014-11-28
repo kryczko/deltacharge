@@ -15,5 +15,6 @@ void run_main(Storage& s) {
     s.files[1].filename = s.filename2;
     read_file(s.files[0]);
     read_file(s.files[1]);
-    diff3D(s);   
+    diff3D(s);  
+    diff1D(s); 
 }

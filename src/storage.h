@@ -37,8 +37,10 @@ typedef std::vector<File> Files;
 
 struct Storage {
     std::string filename1, filename2, operation; // two file names 
+    double int_val;
     Files files;   
     Storage() {
         filename1 = filename2 = operation = "none";
+        int_val = -1 ;
     }
 };

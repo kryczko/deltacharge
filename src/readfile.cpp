@@ -52,6 +52,6 @@ void read_file(File& f) {
         } else if (datacount < f.nbins()){
             f.data.push_back(stod(stuff.c_str()));
             datacount ++;
-        }                
+        }    
     }
 }
